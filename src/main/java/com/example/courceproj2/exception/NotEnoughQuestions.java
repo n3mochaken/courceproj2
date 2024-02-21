@@ -5,3 +5,6 @@ public class NotEnoughQuestions extends RuntimeException{
         super(message);
     }
 }
+
+
+
