@@ -5,10 +5,10 @@ import com.example.courceproj2.domain.Question;
 import java.util.Collection;
 
 public interface QuestionService {
-    Question add(String question, String answer);
-    Question add(Question question);
-    Question remove (Question question);
+    boolean add(String question, String answer);
+    boolean remove (String question, String answer);
     Collection<Question>getAll();
 
     Question getRandomQuestion();
+    int getSize();
 }
