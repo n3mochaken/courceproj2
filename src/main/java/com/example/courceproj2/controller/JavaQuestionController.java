@@ -20,15 +20,15 @@ public class JavaQuestionController {
     }
 
     @GetMapping("/add")
-    public Question addQuestion(@RequestParam("q") String question,
+    public void addQuestion(@RequestParam("q") String question,
                                 @RequestParam("a") String answer) {
-        return questionService.add(question, answer);
+         questionService.add(question, answer);
     }
 
     @GetMapping("/remove")
-    public Question removeQuestion(@RequestParam("q") String question,
+    public void removeQuestion(@RequestParam("q") String question,
                                    @RequestParam("a") String answer) {
-        return questionService.remove(new Question(question, answer));
+         questionService.remove(question, answer);
     }
 
     @GetMapping
@@ -37,6 +37,5 @@ public class JavaQuestionController {
     }
 
 }
-
 
 
